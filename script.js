@@ -1,4 +1,4 @@
-const horarios = ["14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30"];
+const horarios = ["14:00", "142:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30"];
 const dias = ["lunes", "martes", "miercoles", "jueves", "viernes"];
 
 dias.forEach(dia => {
