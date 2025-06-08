@@ -10,8 +10,14 @@ dias.forEach(dia => {
     btn.innerText = `${hora} - Disponible`;
 
     btn.addEventListener("click", () => {
-      btn.classList.add("booked");
-      btn.innerText = `${hora} - Reservado`;
+      const nombre = prompt("Ingresá tu nombre para reservar este turno:");
+      
+      // Solo continúa si se ingresó un nombre válido
+      if (nombre && nombre.trim() !== "") {
+        btn.classList.add("booked");
+        btn.innerText = `${hora} - ${nombre}`;
+        btn.disabled = true;
+      }
     });
 
     contenedor.appendChild(btn);
