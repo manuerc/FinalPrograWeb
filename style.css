@@ -1,3 +1,5 @@
+/* --- Estilos base --- */
+
 /* Botón de slot disponible */
 .slot {
   background-color: #4CAF50;
@@ -10,6 +12,7 @@
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.2s ease;
+  box-sizing: border-box;
 }
 
 .slot:hover {
@@ -43,6 +46,7 @@
   border-radius: 10px;
   min-width: 180px;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
 }
 
 /* Botón cancelar */
@@ -93,4 +97,48 @@ header p {
   color: #777;
   margin: 4px 0 12px;
   text-align: center;
+}
+
+/* Bloque de reglas */
+#reglas-turnos,
+.info-uso {
+  background: #e3f2fd;
+  border-left: 4px solid #1565c0;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 18px auto 0 auto;
+  max-width: 600px;
+  font-size: 15px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+  .week {
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+
+  .day-column {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  #reglas-turnos,
+  .info-uso {
+    max-width: 98vw;
+    font-size: 14px;
+    padding: 10px 8px;
+    margin-top: 10px;
+  }
 }

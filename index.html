@@ -9,28 +9,28 @@
 <body>
   <header>
     <h1>Agenda del Peluquero</h1>
-    <p>Seleccioná un horario disponible. Una vez reservado, no se puede volver a elegir.</p>
+    <p>Seleccioná un horario disponible. En caso de tener alguna consulta, revisar las reglas del sistema debajo de la agenda de turnos.</p>
     <button id="cancelarTurno" class="cancel-button" style="display: none;">Cancelar mi turno</button>
   </header>
 
   <main>
-    <section class="week">
-      <div class="day-column" id="lunes"><h2>Lunes</h2></div>
-      <div class="day-column" id="martes"><h2>Martes</h2></div>
-      <div class="day-column" id="miercoles"><h2>Miércoles</h2></div>
-      <div class="day-column" id="jueves"><h2>Jueves</h2></div>
-      <div class="day-column" id="viernes"><h2>Viernes</h2></div>
+    <section class="week" aria-label="Semana">
+      <article class="day-column" id="lunes"><h2>Lunes</h2></article>
+      <article class="day-column" id="martes"><h2>Martes</h2></article>
+      <article class="day-column" id="miercoles"><h2>Miércoles</h2></article>
+      <article class="day-column" id="jueves"><h2>Jueves</h2></article>
+      <article class="day-column" id="viernes"><h2>Viernes</h2></article>
     </section>
-    <section class="info-uso">
-  <h3>Reglas del sistema de turnos</h3>
-  <ul>
-    <li>✔️ Solo podés reservar <strong>un turno por semana</strong> con el mismo nombre.</li>
-    <li>❌ No podés reservar turnos para <strong>hoy ni días pasados</strong>.</li>
-    <li>❌ No se permite cancelar turnos <strong>el mismo día</strong>.</li>
-    <li>📲 Para más ayuda o situaciones particulares, escribinos al +54 12 34567890 </a>.</li>
-  </ul>
-</section>
 
+    <section class="info-uso" aria-label="Reglas del sistema de turnos">
+      <h3>Reglas del sistema de turnos</h3>
+      <ul>
+        <li>✔️ Solo podés reservar <strong>un turno por semana</strong> con el mismo nombre.</li>
+        <li>❌ No podés reservar turnos para <strong>hoy ni días pasados</strong>.</li>
+        <li>❌ No se permite cancelar turnos <strong>el mismo día</strong>.</li>
+        <li>📲 Para más ayuda o situaciones particulares, escribinos al <a href="tel:+541234567890">+54 12 34567890</a>.</li>
+      </ul>
+    </section>
   </main>
 
   <script src="script.js"></script>
