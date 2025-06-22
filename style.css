@@ -172,6 +172,7 @@ header p {
   }
 }
 
+
 /* Footer */
 .footer {
   background-color: #f8f9fa;
@@ -222,4 +223,67 @@ header p {
 
 .footer-section a:hover {
   text-decoration: underline;
+}
+
+/* Formulario emergente */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.form-popup {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.form-popup h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.form-popup input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#form-cancelar {
+  background: #ccc;
+}
+
+#form-confirmar {
+  background: #4CAF50;
+  color: white;
 }

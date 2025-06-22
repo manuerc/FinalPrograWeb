@@ -1,12 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const horarios = ["14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30"];
   const dias = ["lunes", "martes", "miercoles", "jueves", "viernes"];
-  const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
-                 "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
   const btnCancelar = document.getElementById("cancelarTurno");
+
+  const overlay = document.getElementById("form-overlay");
+  const inputNombre = document.getElementById("input-nombre");
+  const inputTelefono = document.getElementById("input-telefono");
+  const btnFormCancelar = document.getElementById("form-cancelar");
+  const btnFormConfirmar = document.getElementById("form-confirmar");
 
   let turnoReservado = null;
   let botonReservado = null;
+  let reservaTemp = {};
 
   const reservaExistente = localStorage.getItem("reserva");
   let reservaData = null;
@@ -17,17 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCancelar.style.display = "inline-block";
   }
 
-  // Retorna la fecha del lunes de la semana actual o próxima (si hoy es domingo)
   function getFechaLunesCorrecta() {
     const hoy = new Date();
-    const diaHoy = hoy.getDay(); // 0 = domingo, 1 = lunes, ..., 6 = sábado
+    const diaHoy = hoy.getDay();
     const lunes = new Date(hoy);
-
     if (diaHoy === 0) {
-      // Si es domingo, mostrar la semana próxima
-      lunes.setDate(hoy.getDate() + 1); // lunes siguiente
+      lunes.setDate(hoy.getDate() + 1);
     } else {
-      // Si es cualquier otro día, mostrar la semana actual
       lunes.setDate(hoy.getDate() - (diaHoy - 1));
     }
     return lunes;
@@ -55,11 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.className = "slot";
       btn.innerText = `${hora} - Disponible`;
 
-      // Comparar fecha del turno con hoy para deshabilitar si es pasado
       const fechaTurno = new Date(fecha);
       const [h, m] = hora.split(":");
       fechaTurno.setHours(parseInt(h), parseInt(m));
-
       const hoyBase = new Date();
       hoyBase.setHours(0, 0, 0, 0);
       const esPasado = fechaTurno < hoyBase;
@@ -87,18 +87,42 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        const nombre = prompt("Ingresá tu nombre para reservar este turno:")?.trim();
+        reservaTemp = {
+          dia,
+          hora,
+          fecha: fecha.toISOString().split('T')[0]
+        };
 
-        if (nombre) {
-          const fechaExacta = fecha.toISOString().split('T')[0]; // YYYY-MM-DD
-          const reserva = { nombre, dia, hora, fecha: fechaExacta };
-          localStorage.setItem("reserva", JSON.stringify(reserva));
-          window.location.href = "confirmacion.html";
-        }
+        inputNombre.value = "";
+        inputTelefono.value = "";
+        overlay.style.display = "flex";
       });
 
       contenedor.appendChild(btn);
     });
+  });
+
+  btnFormCancelar.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+
+  btnFormConfirmar.addEventListener("click", () => {
+    const nombre = inputNombre.value.trim();
+    const telefono = inputTelefono.value.trim();
+
+    if (!nombre || !telefono) {
+      alert("Por favor completá ambos campos.");
+      return;
+    }
+
+    const reserva = {
+      ...reservaTemp,
+      nombre,
+      telefono
+    };
+
+    localStorage.setItem("reserva", JSON.stringify(reserva));
+    window.location.href = "confirmacion.html";
   });
 
   btnCancelar.addEventListener("click", () => {
