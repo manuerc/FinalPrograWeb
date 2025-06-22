@@ -60,7 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const [h, m] = hora.split(":");
       fechaTurno.setHours(parseInt(h), parseInt(m));
 
-      const esPasado = fechaTurno < hoy.setHours(0, 0, 0, 0);
+      const hoyBase = new Date();
+      hoyBase.setHours(0, 0, 0, 0);
+      const esPasado = fechaTurno < hoyBase;
 
       if (esPasado) {
         btn.disabled = true;

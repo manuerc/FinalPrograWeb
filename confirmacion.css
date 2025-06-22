@@ -10,7 +10,7 @@ body {
 }
 
 main.confirmacion-container {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@ main.confirmacion-container {
 
 .confirmacion-container h1 {
   font-size: 26px;
-  color: #2e7d32; /* Verde fuerte */
+  color: #2e7d32;
   margin-bottom: 16px;
 }
 
@@ -31,33 +31,31 @@ main.confirmacion-container {
   color: #444;
 }
 
-/* Botón cancelar */
 #cancelar-turno {
   background-color: #d9534f;
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px 20px;
   font-size: 15px;
   border-radius: 6px;
   cursor: pointer;
   margin-bottom: 20px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s;
 }
 
 #cancelar-turno:hover {
   background-color: #c9302c;
 }
 
-/* Botón volver */
 .volver-link {
   display: inline-block;
   padding: 12px 20px;
   background-color: #2e7d32;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   border-radius: 6px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s;
 }
 
 .volver-link:hover {

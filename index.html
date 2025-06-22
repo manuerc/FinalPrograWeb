@@ -9,9 +9,10 @@
 <body>
   <header>
     <h1>Agenda peluquería</h1>
-    <p>Seleccioná un horario disponible. En caso de tener alguna consulta, revisar las reglas del sistema debajo de la agenda de turnos.</p>
+    <p>Seleccioná un horario disponible. En caso de tener alguna consulta, revisá las reglas del sistema debajo de la agenda de turnos.</p>
   </header>
-<button id="cancelarTurno" class="cancel-button" style="display: none;">Cancelar mi turno</button>
+
+  <button id="cancelarTurno" class="cancel-button" style="display: none;">Cancelar mi turno</button>
 
   <main>
     <section class="week" aria-label="Semana">
@@ -21,33 +22,33 @@
       <article class="day-column" id="jueves"><h2>Jueves</h2></article>
       <article class="day-column" id="viernes"><h2>Viernes</h2></article>
     </section>
-
-
   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p>+54 12 3456 7890</p>
+        <p>info@peluquero.com</p>
+      </div>
+      <div class="footer-section">
+        <h4>Seguinos</h4>
+        <p>
+          <a href="#">Instagram</a> |
+          <a href="#">Facebook</a>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Reglas</h4>
+        <ul class="footer-rules">
+          <li>Máximo 1 turno por semana por cliente.</li>
+          <li>No se pueden reservar ni cancelar turnos para hoy.</li>
+          <li>Los turnos solo se modifican hasta el día anterior.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <h4>Contacto</h4>
-      <p>📞 +54 12 3456 7890</p>
-      <p>📧 info@peluquero.com</p>
-    </div>
-    <div class="footer-section">
-      <h4>Seguinos</h4>
-      <p>
-        <a href="#">Instagram</a><br>
-        <a href="#">Facebook</a>
-      </p>
-    </div>
-    <div class="footer-section">
-      <h4>Reglas</h4>
-      <ul class="footer-rules">
-        <li>Máximo 1 turno por semana por cliente.</li>
-        <li>No se pueden reservar ni cancelar turnos para hoy.</li>
-        <li>Los turnos solo se modifican hasta el día anterior.</li>      </ul>
-    </div>
-  </div>
-</footer>
+</html>

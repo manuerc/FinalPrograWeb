@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Formatear fecha (opcional: de YYYY-MM-DD a formato más legible)
-  const fechaParts = reserva.fecha.split("-");
-  const fechaFormateada = `${fechaParts[2]}/${fechaParts[1]}/${fechaParts[0]}`; // DD/MM/YYYY
+  const [anio, mes, dia] = reserva.fecha.split("-");
+  const fechaFormateada = `${dia}/${mes}/${anio}`;
 
   mensaje.innerText = `¡Gracias ${reserva.nombre}! Reservaste tu turno el día ${reserva.dia} (${fechaFormateada}) a las ${reserva.hora}.`;
 
