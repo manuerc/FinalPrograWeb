@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agenda de Turnos - Peluquero</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agenda del Peluquero</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Agenda de Turnos</h1>
-    <p>Seleccioná un turno disponible. Solo podés reservar uno por persona.</p>
+    <h1>Agenda del Peluquero</h1>
+    <p>Seleccioná un horario disponible. Una vez reservado, no se puede volver a elegir.</p>
+    <button id="cancelarTurno" class="cancel-button" style="display: none;">Cancelar mi turno</button>
   </header>
+
   <main>
-    <section class="agenda">
-      <div class="dia-columna" id="lunes"><h2>Lunes</h2></div>
-      <div class="dia-columna" id="martes"><h2>Martes</h2></div>
-      <div class="dia-columna" id="miercoles"><h2>Miércoles</h2></div>
-      <div class="dia-columna" id="jueves"><h2>Jueves</h2></div>
-      <div class="dia-columna" id="viernes"><h2>Viernes</h2></div>
+    <section class="week">
+      <div class="day-column" id="lunes"><h2>Lunes</h2></div>
+      <div class="day-column" id="martes"><h2>Martes</h2></div>
+      <div class="day-column" id="miercoles"><h2>Miércoles</h2></div>
+      <div class="day-column" id="jueves"><h2>Jueves</h2></div>
+      <div class="day-column" id="viernes"><h2>Viernes</h2></div>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>

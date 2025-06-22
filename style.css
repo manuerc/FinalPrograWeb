@@ -1,0 +1,77 @@
+.slot {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.slot:hover {
+  background-color: #45a049;
+}
+
+.booked {
+  background-color: #f5c6cb;
+  color: #444;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.week {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.day-column {
+  flex: 0 0 343px;
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 180px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.cancel-button {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #c9302c;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
