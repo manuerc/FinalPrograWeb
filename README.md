@@ -23,5 +23,5 @@ Este proyecto consiste en una aplicación web para la gestión de turnos de una 
    No se implementó un botón de edición directa porque, funcionalmente, resultaría redundante con la opción de cancelar turno. En cambio, al volver desde la segunda interfaz hacia la agenda, el usuario es notificado de que podrá "volver para actualizar el turno", lo que implica cancelar el actual y seleccionar uno nuevo.
 
 2. **Sobre el almacenamiento de datos:**  
-   La aplicación utiliza `localStorage`, lo cual implica que las reservas son guardadas localmente en el navegador del usuario.  
-   Para que esta aplicación funcione de forma real en un entorno multiusuario, sería necesario reemplazar `localStorage` por una base de datos real (como Firebase, Supabase o una API con backend propio) que permita guardar y sincronizar los turnos globalmente entre usuarios.
+   La aplicación utiliza el local storage, lo cual implica que las reservas son guardadas localmente en el navegador del usuario.  
+   Para que esta aplicación funcione de forma real en un entorno multiusuario, sería necesario reemplazar local storage por una base de datos real que permita guardar y sincronizar los turnos globalmente entre usuarios.
