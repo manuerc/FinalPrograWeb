@@ -1,3 +1,4 @@
+/* Botón de slot disponible */
 .slot {
   background-color: #4CAF50;
   color: white;
@@ -15,6 +16,7 @@
   background-color: #45a049;
 }
 
+/* Slot reservado */
 .booked {
   background-color: #f5c6cb;
   color: #444;
@@ -23,6 +25,7 @@
   font-weight: bold;
 }
 
+/* Semana y columnas de días */
 .week {
   display: flex;
   flex-wrap: nowrap;
@@ -42,6 +45,7 @@
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
+/* Botón cancelar */
 .cancel-button {
   background-color: #d9534f;
   color: white;
@@ -59,19 +63,34 @@
   background-color: #c9302c;
 }
 
+/* Header */
+header {
+  background-color: #f8f9fa;
+  padding: 8px;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Título y subtítulo del header */
 header h1 {
   font-size: 32px;
   font-weight: 700;
   color: #222;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 header p {
   font-size: 16px;
   color: #666;
-  margin-bottom: 15px;
-}
-header {
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 40px;
+}
+
+/* Fecha en el header */
+.fecha-dia {
+  font-size: 14px;
+  color: #777;
+  margin: 4px 0 12px;
+  text-align: center;
 }
