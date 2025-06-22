@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main.confirmacion-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+}
+
+.confirmacion-container h1 {
+  font-size: 26px;
+  color: #2e7d32; /* Verde fuerte */
+  margin-bottom: 16px;
+}
+
+.confirmacion-container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* Botón cancelar */
+#cancelar-turno {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease;
+}
+
+#cancelar-turno:hover {
+  background-color: #c9302c;
+}
+
+/* Botón volver */
+.volver-link {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.volver-link:hover {
+  background-color: #1b5e20;
+}
+
+@media (max-width: 768px) {
+  main.confirmacion-container {
+    padding: 20px 8px;
+    max-width: 98vw;
+  }
+
+  .confirmacion-container h1 {
+    font-size: 20px;
+  }
+
+  .confirmacion-container p {
+    font-size: 14px;
+  }
+
+  #cancelar-turno,
+  .volver-link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
