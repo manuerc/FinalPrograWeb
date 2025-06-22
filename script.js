@@ -88,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const nombre = prompt("Ingresá tu nombre para reservar este turno:")?.trim();
 
         if (nombre) {
-          const reserva = { nombre, dia, hora };
+          const fechaExacta = fecha.toISOString().split('T')[0]; // YYYY-MM-DD
+          const reserva = { nombre, dia, hora, fecha: fechaExacta };
           localStorage.setItem("reserva", JSON.stringify(reserva));
           window.location.href = "confirmacion.html";
         }

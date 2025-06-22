@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  mensaje.innerText = `¡Gracias ${reserva.nombre}! Reservaste tu turno el día ${reserva.dia} en el horario ${reserva.hora}.`;
+  // Formatear fecha (opcional: de YYYY-MM-DD a formato más legible)
+  const fechaParts = reserva.fecha.split("-");
+  const fechaFormateada = `${fechaParts[2]}/${fechaParts[1]}/${fechaParts[0]}`; // DD/MM/YYYY
+
+  mensaje.innerText = `¡Gracias ${reserva.nombre}! Reservaste tu turno el día ${reserva.dia} (${fechaFormateada}) a las ${reserva.hora}.`;
 
   document.getElementById("cancelar-turno").addEventListener("click", () => {
     localStorage.removeItem("reserva");
