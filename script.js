@@ -63,8 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const hoyBase = new Date();
       hoyBase.setHours(0, 0, 0, 0);
       const esPasado = fechaTurno < hoyBase;
+      const esHoy = fechaTurno.toDateString() === hoyBase.toDateString();
 
-      if (esPasado) {
+      if (esPasado || esHoy) {
         btn.disabled = true;
         btn.style.opacity = 0.5;
         btn.style.cursor = "not-allowed";
